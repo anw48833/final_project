@@ -6,7 +6,11 @@ function Item(props) {
     return (
         <Card className="user-class">
             <img src={props.image} alt={props.title} className='user-class-img'/>
-            <h2 className='user-class-name'>{props.title}</h2>
+            <div>
+                <h2 className='user-class-name'>{props.title}</h2>
+                <p className='user-class-description'>{props.description}</p>
+            </div>
+            
         </Card>
     );
 }

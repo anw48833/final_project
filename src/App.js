@@ -34,6 +34,13 @@ function App() {
         'https://i.insider.com/58caab3e7d1fb21a008b4574?width=700',
       description: 'yadda yadda'
     },
+    {
+      id: 'i5',
+      title: 'Belle',
+      image:
+        'https://i.insider.com/58caab3e7d1fb21a008b4574?width=700',
+      description: 'yadda yadda'
+    },
    ]
 
   return (
