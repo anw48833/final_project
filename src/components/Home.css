@@ -1,0 +1,12 @@
+.test {
+    width: 100%;
+}
+.test img {
+    width: 100%;
+}
+
+.text {
+    padding-top: 200px;
+    position: absolute;
+    z-index: 1;
+}

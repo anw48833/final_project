@@ -1,5 +1,6 @@
+import Home from './components/Home.js';
 import ProjHeader from './components/ProjHeader.js';
-import Shop from './components/Shop.js';
+/** import Shop from './components/Shop.js'; **/
 import './fonts.css'
 
 function App() {
@@ -8,7 +9,7 @@ function App() {
   return (
     <div>
       <ProjHeader isLoggedin={isLoggedin} />
-      <Shop />
+      <Home />
     </div>
 
 

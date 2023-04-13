@@ -1,3 +1,4 @@
+/** header **/
 .header {
     height: 45px;
     width: 100%;
@@ -7,8 +8,10 @@
     padding: 15px 0px;
     position: fixed;
     background-color: white;
+    z-index: 10;
 }
 
+/** title **/
 .title {
     font-family: 'Poppins';
     text-transform: uppercase;
@@ -18,11 +21,45 @@
     font-size: 30px;
 }
 
+/** logo **/
 .logo {
     width: 70px;
     margin: 0px 15px 0px 20px;
 }
 
+/** home **/
+.home {
+    color: grey;
+    margin-left: auto;
+    margin-right: 10px;
+    font-family: 'Rubik';
+}
+.home a {
+    color: grey;
+    text-decoration: none;
+}
+.home a:hover {
+    color: black;
+    cursor: pointer;
+}
+
+/** items **/
+.items {
+    color: grey;
+    margin-right: auto;
+    margin-left: 10px;
+    font-family: 'Rubik';
+}
+.items a {
+    color: grey;
+    text-decoration: none;
+}
+.items a:hover {
+    color: black;
+    cursor: pointer;
+}
+
+/** button **/
 .button {
     background-color: #5C41FD;
     color: white;
@@ -39,7 +76,6 @@
     font-size: 14px;
     font-family: 'Rubik';
 }
-
 .button:hover {
     background-color: #3b1afd;
     cursor: pointer;
