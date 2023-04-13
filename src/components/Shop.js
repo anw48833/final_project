@@ -16,9 +16,7 @@ function Shop({item_list, isLoggedin}) {
                 isLoggedin = {isLoggedin}
                 />
             ))}
-            <div className='testt'>
-                <Link to = '/create-item'> <div className="add-card">+</div> </Link>
-            </div>
+                <div className="add-card"> <Link to = '/create-item'> + </Link> </div> 
         </div>
     );
 }
