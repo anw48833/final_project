@@ -1,18 +1,63 @@
-.user-class-img {
+.item-class-img {
     width: 100px;
     height: 100px;
     object-fit: cover;
-    margin-right: 10px;
+    margin-right: 15px;
     border-radius: 10px;
 }
 
-.user-class-name {
-    color: black;
-    font-weight: 400;
+.item-class-name {
+    color: #5C41FD;
+    font-weight: 600;
     font-size: 18px;
 }
 
-.user-class-description {
+.item-class-description {
     color: grey;
     font-size: 14px;
+    width: 100%;
+}
+
+/** button **/
+.edit-button {
+    background-color: #5C41FD;
+    color: white;
+    margin-left: auto;
+    margin-top: 20px;
+    margin-right: 25px;
+    padding: 5px;
+    width: 80px;
+    height: 20px;
+    text-align: center;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    font-size: 14px;
+    font-family: 'Rubik';
+}
+.edit-button:hover {
+    background-color: #3b1afd;
+    cursor: pointer;
+}
+
+/** delete button **/
+.delete-button {
+    background-color: #5C41FD;
+    color: white;
+    margin-top: 20px;
+    padding: 5px;
+    width: 80px;
+    height: 20px;
+    text-align: center;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    font-size: 14px;
+    font-family: 'Rubik';
+}
+.delete-button:hover {
+    background-color: #3b1afd;
+    cursor: pointer;
 }
