@@ -1,5 +1,6 @@
 import './Shop.css';
 import Item from './Item'
+import { Link } from 'react-router-dom';
 
 
 function Shop({item_list, isLoggedin}) {
@@ -15,7 +16,9 @@ function Shop({item_list, isLoggedin}) {
                 isLoggedin = {isLoggedin}
                 />
             ))}
-            <a href=""><div className="add-card">+</div></a>
+            <div className='testt'>
+                <Link to = '/create-item'> <div className="add-card">+</div> </Link>
+            </div>
         </div>
     );
 }
