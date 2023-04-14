@@ -5,7 +5,7 @@ import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function FullPage() {
-  const isLoggedin = true;
+  const isLoggedin = false;
   const DUMMY_ITEMS = [
     {
       id: 'i1',
