@@ -3,7 +3,7 @@ import './Home.css';
 
 function Home() {
     return (
-        <div className="homee">
+        <div className="homee" id="home">
             <h2 className="homee-text">DAWG DAYS</h2>
             <div className="about-container">
                 <p className="about-text">

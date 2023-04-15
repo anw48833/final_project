@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 function Shop({item_list, isLoggedin}) {
     return (
-        <div className="shop">
+        <section className="shop" id="items">
             {item_list.map(item => (
                 <Item
                 key = {item.id}
@@ -17,7 +17,7 @@ function Shop({item_list, isLoggedin}) {
                 />
             ))}
                 <div className="add-card"> <Link to = '/create-item'> + </Link> </div> 
-        </div>
+        </section>
     );
 }
 
