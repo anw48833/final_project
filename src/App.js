@@ -1,3 +1,4 @@
+import './App.css';
 import FullPage from './components/FullPage.js';
 import CreateItem from './components/CreateItem.js';
 import EditItem from './components/EditItem.js';
