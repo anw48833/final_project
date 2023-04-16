@@ -1,9 +1,12 @@
 import ProjHeader from './ProjHeader.js';
 import './LogIn.css';
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 function LogIn() {
     const isLoggedin = true;
+    const [username, setUsername] = useState('')
+    const [password, setPassword] = useState('')
     return (
         <div>
             <ProjHeader isLoggedin={isLoggedin} />
@@ -11,8 +14,8 @@ function LogIn() {
                 <div className='create-container'>
                 <form action="/login_page.php" className='login-form'>
                     <h2>Log In</h2>
-                    <input type="text" id="username" name="username" placeholder="Username"></input><p />
-                    <input type="password" id="password" name="password" placeholder="Password"></input><p />
+                    <input type="text" id="username" name="username" placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)}></input><p />
+                    <input type="password" id="password" name="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)}></input><p />
                     <input type="submit" value="Submit" className='submit-button'></input>
                     <div className="signup">Don't have an account? <b><Link to = '/sign-up'>Sign up</Link></b> here.</div>
                 </form>
