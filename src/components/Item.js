@@ -4,9 +4,8 @@ import { Link } from 'react-router-dom';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 
-function Item(props, isLoggedin) {
-    const logOut = false;
-    if ({isLoggedin} == false) {
+function Item(props) {
+    if (props.isLoggedin == false) {
         return (
             <Card className="item-class">
                 <img src={props.image} alt={props.title} className='item-class-img'/>

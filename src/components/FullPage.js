@@ -5,7 +5,7 @@ import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function FullPage() {
-  const isLoggedin = false;
+  const isLoggedin = true;
   const DUMMY_ITEMS = [
     {
       id: 'i1',
@@ -43,6 +43,7 @@ function FullPage() {
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     },
    ]
+
 
   return (
     <div>
