@@ -20,6 +20,28 @@ function CreateItem() {
         </div>
     );
   }
+
+  /**
+  const onSubmit = (e) => {
+    e.preventDefault();
+
+    axios
+        .post('/api/items', item)
+        .then((res) => {
+            setItem({
+                title: '',
+                description: '',
+                image: '',
+            });
+
+            // Push to  /
+            navigate('/');
+        })
+        .catch((err) => {
+            console.log('Error in CreateItem!');
+        });
+  }
+   */
   
   export default CreateItem;
   
