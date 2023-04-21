@@ -1,11 +1,23 @@
 import Home from './Home.js';
 import ProjHeader from './ProjHeader.js';
 import Shop from './Shop.js';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import axios from 'axios';
 
 function FullPage() {
   const isLoggedin = true;
+  const [items, setItems] = useState([]);
+
+  useEffect(() => {
+    async function fetchData() {
+      const response = await axios.get('/api/items');
+      setItems(response.data);
+    }
+    fetchData();
+  }, []);
+
+  /**
   const DUMMY_ITEMS = [
     {
       id: 'i1',
@@ -43,34 +55,15 @@ function FullPage() {
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     },
    ]
+    */
 
 
   return (
     <div>
       <ProjHeader isLoggedin={isLoggedin} />
       <Home />
-      <Shop item_list={DUMMY_ITEMS} isLoggedin={isLoggedin} />
+      <Shop item_list={items} isLoggedin={isLoggedin} />
     </div>
-
-
-    /**
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-     */
   );
 }
 
