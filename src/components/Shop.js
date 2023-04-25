@@ -10,11 +10,11 @@ function Shop({item_list, isLoggedin}) {
             <section className="shop" id="items">
                 {item_list.map(item => (
                     <Item
-                    key = {item.id}
+                    key = {item._id}
                     title = {item.title}
                     image = {item.image}
                     description = {item.description}
-                    id = {item.id}
+                    id = {item._id}
                     isLoggedin = {isLoggedin}
                     />
                 ))}
@@ -26,11 +26,11 @@ function Shop({item_list, isLoggedin}) {
             <section className="shop" id="items">
                 {item_list.map(item => (
                     <Item
-                    key = {item.id}
+                    key = {item._id}
                     title = {item.title}
                     image = {item.image}
                     description = {item.description}
-                    id = {item.id}
+                    id = {item._id}
                     isLoggedin = {isLoggedin}
                     />
                 ))}
