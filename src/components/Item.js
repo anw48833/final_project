@@ -33,7 +33,13 @@ function Item(props) {
       </Card>
     );
   } else {
-    return null;
+    return (
+        <Card className="item-class">
+          <img src={props.image} alt={props.title} className='item-class-img'/>
+          <h2 className='item-class-name'>{props.title}</h2>
+          <p className='item-class-description'>{props.description}</p>
+        </Card>
+      );
   }
 }
 

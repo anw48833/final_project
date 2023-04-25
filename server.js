@@ -40,6 +40,7 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
+/**
 // add the route handler for /sign-up
 app.get('/sign-up', function (req, res) {
     res.sendFile(path.join(__dirname, 'build', 'index.html'));
@@ -49,6 +50,7 @@ app.get('/sign-up', function (req, res) {
 app.get('/log-in', function (req, res) {
     res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
+ */
 
 mongoose.set('strictQuery', false);
 mongoose.connect(conn_str, {

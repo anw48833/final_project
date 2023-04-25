@@ -6,7 +6,6 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import axios from 'axios';
 
 function FullPage() {
-  const isLoggedin = true;
   const [items, setItems] = useState([]);
 
   useEffect(() => {
@@ -16,7 +15,9 @@ function FullPage() {
     }
     fetchData();
   }, []);
-  
+
+  const isLoggedin = false;
+
   return (
     <div>
       <ProjHeader isLoggedin={isLoggedin} />
