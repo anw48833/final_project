@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 import { useState } from 'react';
 
 
-function Shop({item_list, isLoggedin}) {
-    if (isLoggedin) {
+function Shop({item_list, isLoggedIn}) {
+    if (isLoggedIn) {
         return (
             <section className="shop" id="items">
                 {item_list.map(item => (
@@ -15,7 +15,7 @@ function Shop({item_list, isLoggedin}) {
                     image = {item.image}
                     description = {item.description}
                     id = {item._id}
-                    isLoggedin = {isLoggedin}
+                    isLoggedIn = {isLoggedIn}
                     />
                 ))}
                     <div className="add-card"> <Link to = '/create-item'> + </Link> </div> 
@@ -31,7 +31,7 @@ function Shop({item_list, isLoggedin}) {
                     image = {item.image}
                     description = {item.description}
                     id = {item._id}
-                    isLoggedin = {isLoggedin}
+                    isLoggedIn = {isLoggedIn}
                     />
                 ))}
             </section>

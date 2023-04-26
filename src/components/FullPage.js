@@ -7,6 +7,7 @@ import axios from 'axios';
 
 function FullPage() {
   const [items, setItems] = useState([]);
+  const [isLoggedIn, setLogInStatus] = useState(false);
 
   useEffect(() => {
     async function fetchData() {
@@ -14,15 +15,37 @@ function FullPage() {
       setItems(response.data);
     }
     fetchData();
+
+    const storedLoginStatus = localStorage.getItem('isLoggedIn');
+    if (storedLoginStatus) {
+      setLogInStatus(JSON.parse(storedLoginStatus));
+    } else {
+      checkLoginStatus();
+    }
+
+    async function checkLoginStatus() {
+      const token = localStorage.getItem('auth-token');
+      if (token) {
+        try {
+          const response = await axios.post('/api/users/tokenIsValid', null, {
+            headers: { 'x-auth-token': token }
+          });
+          setLogInStatus(response.data);
+          localStorage.setItem('isLoggedIn', JSON.stringify(response.data));
+        } catch (error) {
+          console.log(error);
+        }
+      }
+    }
   }, []);
 
-  const isLoggedin = false;
+  console.log("isLoggedIn:", isLoggedIn);
 
   return (
     <div>
-      <ProjHeader isLoggedin={isLoggedin} />
+      <ProjHeader isLoggedIn={isLoggedIn} setLogInStatus={setLogInStatus}/>
       <Home />
-      <Shop item_list={items} isLoggedin={isLoggedin} />
+      <Shop item_list={items} isLoggedIn={isLoggedIn} />
     </div>
   );
 }

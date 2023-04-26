@@ -22,7 +22,7 @@ function Item(props) {
     }
   };
 
-  if (!isDeleted && props.isLoggedin) {
+  if (!isDeleted && props.isLoggedIn) {
     return (
       <Card className="item-class">
         <img src={props.image} alt={props.title} className='item-class-img'/>
