@@ -6,6 +6,8 @@ function ProjHeader(props) {
 
     function handleClickLO(){
         props.setLogInStatus(false);
+        localStorage.removeItem('auth-token');
+        localStorage.removeItem('isLoggedIn');
     }
     function handleClickLI(){
         props.setLogInStatus(true);

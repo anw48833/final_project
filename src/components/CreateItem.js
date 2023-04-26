@@ -4,7 +4,6 @@ import axios from 'axios';
 import ProjHeader from './ProjHeader.js';
 
 function CreateItem() {
-    const isLoggedin = true;
     const [item, setItem] = useState({ title: '', description: '', image: '' });
 
     const handleSubmit = async (e) => {
@@ -25,7 +24,6 @@ function CreateItem() {
 
     return (
         <div>
-            <ProjHeader isLoggedin={isLoggedin} />
             <div className='create-page'>
                 <div className='create-container'>
                     <form onSubmit={handleSubmit} className='item-form'>

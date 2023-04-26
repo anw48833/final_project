@@ -5,9 +5,8 @@ import axios from 'axios';
 import { useParams } from 'react-router';
 import { useLocation } from 'react-router-dom';
 
-function EditItem() {
+function EditItem(props) {
     const { id } = useParams();
-    const isLoggedin = true;
 
     const location = useLocation();
     const [_id, set_id] = useState(location.state.item._id);
@@ -41,7 +40,6 @@ function EditItem() {
 
     return (
         <div>
-            <ProjHeader isLoggedin={isLoggedin} />
             <div className='create-page'>
                 <div className='create-container'>
                     <form onSubmit={handleSubmit} className='item-form'>

@@ -6,13 +6,13 @@ import SignUp from './components/SignUp.js';
 import LogIn from './components/LogIn.js';
 import Shop from './components/Shop.js';
 import ProjHeader from './components/ProjHeader.js';
+import NotFound from './components/NotFound.js'
 import './fonts.css'
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import axios from "axios";
 import UserContext from './context/UserContext';
 import Item from './components/Item';
-
 
 function App() {
   const [isLoggedIn, setLogInStatus] = useState(false);
@@ -74,6 +74,7 @@ function App() {
             <Route path='/sign-up' element={<SignUp handleClickLI={handleClickLI} />} />
             <Route path='/log-in' element={<LogIn handleClickLI={handleClickLI} />} />
             <Route path='/shop' element={<Shop />} />
+            <Route path="/*" element={<NotFound />} />
           </Routes>
         </div>
       </Router>
