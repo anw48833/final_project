@@ -55,7 +55,7 @@ function LogIn(props) {
                   onChange={e=>setPassword(e.target.value)}
                   required
                 />
-              <button disabled={loading} className='submit-button' type="submit">Sign Up</button>
+              <button disabled={loading} className='submit-button' type="submit">Log In</button>
               {error && <Alert id="Error" variant="danger">{error}</Alert>}
               
               <div className="signup">Don't have an account? <b><Link to='/sign-up'>Sign up</Link></b> here.</div>
