@@ -33,9 +33,7 @@ function SignUp(props){
         token:loginRes.data.token,
         user:loginRes.data.user,
       });
-      localStorage.setItem("auth-token",loginRes.data.token);
       setLoading(false);
-      props.handleClickLI();
       navigate('/');
     }catch(err){
       setLoading(false);
